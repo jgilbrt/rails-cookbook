@@ -1,7 +1,7 @@
 class CreateBookmarks < ActiveRecord::Migration[7.1]
   def change
     create_table :bookmarks do |t|
-      t.string :comment
+      t.text :comment
       t.references :category, null: false, foreign_key: true
       t.references :recipe, null: false, foreign_key: true
 
